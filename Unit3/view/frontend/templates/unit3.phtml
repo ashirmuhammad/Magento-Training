@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @var \RLTSquare\Unit3\Block\User $block
+ */
+?>
+
+<style>
+    table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+    td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
+    tr:nth-child(even) { background-color: #dddddd; }
+    .uname{width:20%} .password{width:30%}
+
+</style>
+
+<table>
+    <tr>
+        <th class="uname">Username</th>
+        <th class="password">Password</th>
+        <th>Environment Type</th>
+    </tr>
+
+    <?php
+    $unit3Data = $block->unit3Data();
+        echo '<tr>
+                    <td>'.$unit3Data[0].'</td>
+                    <td>'.$unit3Data[1].'</td>
+                    <td>'.$unit3Data[2].'</td>
+                  </tr>';
+
+    ?>
+</table>
